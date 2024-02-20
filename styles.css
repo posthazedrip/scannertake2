@@ -1,0 +1,43 @@
+body {
+    margin: 8px;
+}
+
+
+
+.nav-wrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+.nav-wrapper>.center>.Brand{
+    justify-content: center;
+    width: 300px;
+    text-align: center;
+    font-size: 2.9rem;
+    font-weight: bolder;
+    
+}
+.scanButton{
+    position: fixed;
+    left: 245px;
+    top: 750px;
+
+}
+.content-wrapper{
+    position: fixed;
+    left: 650px;
+    top: 400px;
+
+}
+.content-wrapper2{
+    position: fixed;
+    left: 20px;
+    top: 350px;
+
+}
+.content-wrapper3{
+    position: fixed;
+    left: 255px;
+    top: 1199px;
+
+}
