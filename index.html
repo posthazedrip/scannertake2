@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <title>PostHazeDrip</title>
     <link rel="stylesheet" href= "styles.css">
+    <script>
+        document.getElementById('cameraButton').addEventListener('click', function() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function(stream) {
+                    var videoElement = document.createElement('video');
+                    videoElement.srcObject = stream;
+                    videoElement.autoplay = true;
+                    document.body.appendChild(videoElement);
+                })
+                .catch(function(error) {
+                    console.error('Error accessing the camera:', error);
+                });
+        });
+    </script>
+    <style>
+        body {
+            background-color: rgb(169, 226, 84);
+        }
+    </style>
 </head>
-
-<body>
-    <!DOCTYPE html>
-<html> 
-    <head>
-     <title>Html Background color</title>
-    </head>
-    <body
-    style="Background-color:rgb(169 226 84);"> 
-    </body>"
-</html>   
-</body>
 
 <body>
     <div class="container">
@@ -32,34 +39,37 @@
                 </div>
             </div>      
         </div>
-<body>
 
-    <div class="scanButton">
-        <div class="scanButton-wrapper">
-            <div class="Scanner" >
-                <img src= "photos/scanButton.png">
+        <div class="scanButton">
+            <div class="scanButton-wrapper">
+                <div class="Scanner" >
+                    <img id="cameraButton" src= "photos/scanButton.png">
+                </div> 
             </div> 
-        </div> 
-    </div>
-<div class="flower">
-    <div class="content-wrapper2">
-        <div class="flower-wrapper">
-            <div class="flower">
-                <img src= "photos/phd10.png">
-            </div> 
-        </div> 
-    </div>
-    <div class="content-wrapper">
-        <div class="flower-wrapper2">
-            <div class="sign">
-                <img src="photos/phd3.png">
+        </div>
+        <div class="flower">
+            <div class="content-wrapper2">
+                <div class="flower-wrapper">
+                    <div class="flower">
+                        <img src= "photos/phd10.png">
+                    </div> 
+                </div> 
             </div>
-        </div>    
-    </div>
-    <div class="content-wrapper3">
-        <div class="flower-wrapper2">
-            <div class="sign">
-                <img src="photos/CODE.png">
+            <div class="content-wrapper">
+                <div class="flower-wrapper2">
+                    <div class="sign">
+                        <img src="photos/phd3.png">
+                    </div>
+                </div>    
             </div>
-        </div>    
+            <div class="content-wrapper3">
+                <div class="flower-wrapper2">
+                    <div class="sign">
+                        <img src="photos/CODE.png">
+                    </div>
+                </div>    
+            </div>
+        </div>
     </div>
+</body>
+</html>
